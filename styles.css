@@ -1,0 +1,789 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.hero-content {
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    background-color: black;
+    height: 60vh;
+    padding-top: 17rem;
+    overflow: hidden; /* Important to clip any overflow */
+}
+
+.hero-mic {
+    position: absolute;
+    top: -6rem; /* adjust as needed */
+    z-index: 2; /* higher z-index = on top */
+    width: 1200px; /* adjust to your design */
+    margin-right: -950px;
+}
+
+.microphone-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFCC38;
+    height: 40vh;
+    width: 100%;
+    position: absolute;
+    top: 20rem; /* push it below the mic */
+    z-index: 1; /* lower than mic */
+}
+
+.hero-title {
+    max-width: 1440px;
+    max-height: 150px;
+    z-index: 1;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding-top: 12rem;
+    height: 70vh;
+  }
+
+  .hero-mic {
+    top: -3rem;
+    width: 90vw;
+    margin-right: -60vw;
+  }
+
+  .microphone-container {
+    top: 16rem;
+    height: 30vh;
+  }
+
+  .hero-title {
+    width: 90%;         /* Take more width on small screens */
+    max-width: 100%;
+  }
+}
+@media (max-width: 1200px) {
+  .hero-title {
+    width: 90%;         /* Take more width on small screens */
+    max-width: 100%;
+  }
+}
+
+/* Welcome Section */
+.welcome-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 4rem 2rem;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+    height: 30vh;
+}
+
+.welcome-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+.decoration-star {
+    position: absolute;
+    top: -1rem;
+    left: 2rem;
+    font-size: 2rem;
+    color: #ffd700;
+    animation: twinkle 2s ease-in-out infinite;
+}
+
+.decoration-plus {
+    position: absolute;
+    bottom: -1rem;
+    right: 2rem;
+    font-size: 2rem;
+    color: #ff1493;
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.2); }
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.welcome-title {
+    font-size: 5.5rem;
+    font-weight: 900;
+    color: #6f42c1;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    background: linear-gradient(45deg, #6f42c1, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.welcome-subtitle {
+    font-size: 2.5rem;
+    color: #495057;
+    font-weight: 500;
+}
+
+/* Podcast Section */
+.podcast-section {
+    direction: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1a1a1a;
+    padding: 2rem 2rem;
+    color: white;
+    border-top: 1px solid white;
+    /* min-height: 1340px; */
+}
+
+.podcast-content {
+   box-shadow: inset 0 1px 0 rgba(94, 88, 88, 0.3),
+              inset 0 -1px 0 rgba(94, 88, 88, 0.3); 
+    padding: 100px 0;
+    direction: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+.competitino {
+  display: block;         /* Make image act like a block element */
+  margin: 2rem auto;      /* Center horizontally and add vertical spacing */
+  max-width: 100%;        /* Responsive image scaling */
+  height: auto;        
+  margin-top: 14rem;
+}
+
+.podcast-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.podcast-image::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, #ff1493, #ffd700, #ff1493);
+    border-radius: 25px;
+    z-index: -1;
+    animation: borderRotate 3s linear infinite;
+}
+
+@keyframes borderRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.podcast-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.podcast-image:hover img {
+    transform: scale(1.05);
+}
+
+.podcast-text {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: #e9ecef;
+}
+
+.podcast-text p {
+    margin-bottom: 0.5rem;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.podcast-text p:nth-child(1) { animation-delay: 0.1s; }
+.podcast-text p:nth-child(2) { animation-delay: 0.2s; }
+.podcast-text p:nth-child(3) { animation-delay: 0.3s; }
+.podcast-text p:nth-child(4) { animation-delay: 0.4s; }
+.podcast-text p:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Competition Section */
+.competition-section {
+    background-image: url('/home/fatima/podcasty/Rectangle389.png') ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 4rem 2rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.competition-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.decoration-plus-left {
+    position: absolute;
+    top: -1rem;
+    left: 2rem;
+    font-size: 2rem;
+    color: #ff1493;
+    animation: rotate 3s linear infinite;
+}
+
+.competition-title {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #ff1493;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.competition-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.competition-main {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.competition-subtitle {
+    font-size: 4rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #8b5cf6 0%, #6f42c1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 2rem;
+}
+
+.decoration-plus-small {
+    position: absolute;
+    top: 1rem;
+    left: 3rem;
+    font-size: 1.5rem;
+    color: #ffd700;
+    animation: rotate 2s linear infinite;
+}
+
+.participation-options {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.option-card {
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.option-card:hover {
+    transform: translateY(-5px);
+}
+
+.option-card.pink {
+    background: #ff1493;
+    color: white;
+}
+
+.option-card.blue {
+    background: #007bff;
+    color: white;
+}
+
+.option-card.orange {
+    background: #fd7e14;
+    color: white;
+}
+
+.participation-tags {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.tag:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.competition-description {
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #e9ecef;
+    margin-bottom: 2rem;
+}
+
+.decoration-plus-bottom {
+    position: absolute;
+    bottom: -2rem;
+    right: 2rem;
+    font-size: 2rem;
+    color: #ffd700;
+    animation: rotate 3s linear infinite;
+}
+
+/* Participants Section */
+.participants-section {
+    background: linear-gradient(135deg, #6f42c1 0%, #8b5cf6 100%);
+    padding: 4rem 2rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.participants-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+.decoration-star-white {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    font-size: 2rem;
+    color: white;
+    animation: twinkle 2s ease-in-out infinite;
+}
+
+.paper-plane {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    font-size: 2rem;
+    color: white;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.participants-title {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.participants-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+}
+
+.participants-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.participant-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    aspect-ratio: 1;
+}
+
+.participant-card:hover {
+    transform: scale(1.05);
+}
+
+.participant-card.featured {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    background: linear-gradient(45deg, #ff1493, #fd7e14);
+    padding: 3px;
+}
+
+.participant-card.featured img {
+    border-radius: 12px;
+}
+
+.participant-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .welcome-title {
+        font-size: 2.5rem;
+    }
+    
+    .competition-title {
+        font-size: 2rem;
+    }
+    
+    .competition-subtitle {
+        font-size: 2.5rem;
+    }
+    
+    .participants-title {
+        font-size: 2rem;
+    }
+    
+    .podcast-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .podcast-image {
+        order: 2;
+    }
+    
+    .podcast-text {
+        order: 1;
+        text-align: center;
+    }
+    
+    .participation-options {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .participants-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 400px;
+    }
+    
+    .participant-card.featured {
+        grid-column: 1 / 3;
+        grid-row: auto;
+    }
+    
+    .decoration-star,
+    .decoration-plus,
+    .decoration-plus-left,
+    .decoration-plus-small,
+    .decoration-plus-bottom,
+    .decoration-star-white,
+    .paper-plane {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.5rem;
+    }
+    
+    .welcome-title {
+        font-size: 2rem;
+    }
+    
+    .welcome-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .competition-title {
+        font-size: 1.8rem;
+    }
+    
+    .competition-subtitle {
+        font-size: 2rem;
+    }
+    
+    .participants-title {
+        font-size: 1.8rem;
+    }
+    
+    .microphone {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .podcast-section,
+    .competition-section,
+    .participants-section {
+        padding: 2rem 1rem;
+    }
+    
+    .participants-grid {
+        grid-template-columns: 1fr;
+        max-width: 250px;
+    }
+    
+    .participant-card.featured {
+        grid-column: 1;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+*:focus {
+    outline: 2px solid #ff1493;
+    outline-offset: 2px;
+}
+
+/* ----------------------second section -------------------------- */
+
+
+.podcast-section {
+    padding: 60px 40px;
+    background: black;
+}
+
+.image-container {
+    flex: 0 0 auto;
+    position: relative;
+}
+
+.layered-frames {
+    position: relative;
+    width: 320px;
+    height: 280px;
+}
+
+/* Largest rectangle (bottom layer) */
+.frame-large {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 280px;
+    height: 200px;
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+    /* border-radius: 15px; */
+    z-index: 1;
+    transform: rotate(-3deg);
+
+}
+
+/* Medium rectangle (middle layer) */
+/* .frame-medium {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 290px;
+    height: 250px;
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+    border-radius: 12px;
+    z-index: 2;
+} */
+
+/* Photo container (top layer) */
+.photo-frame {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    width: 260px;
+    height: 180px;
+    background: linear-gradient(135deg, #7248d5 0%, #9244db 100%);
+    /* border-radius: 10px; */
+    /* padding: 4px; */
+    z-index: 1;
+    transform: rotate(-3deg);
+    transform-origin: center;
+}
+
+/* Purple rectangle behind image (top layer) */
+/* .frame-purple {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 270px;
+    height: 180px;
+    background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
+    border-radius: 12px;
+    z-index: 4;
+    transform: rotate(-1deg);
+    transform-origin: center;
+} */
+
+.podcast-image {
+    top:-15px;
+    width: 260px;
+    height: 220px;
+    object-fit: cover;
+    /* border-radius: 8px; */
+    display: block;
+    position: relative;
+    z-index: 2;
+    transform: rotate(3deg);
+
+}
+
+/* Top image layer (highest layer) */
+/* .top-image-frame {
+    position: absolute;
+    top: 10px;
+    left: 40px;
+    width: 200px;
+    height: 140px;
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+    border-radius: 8px;
+    padding: 3px;
+    z-index: 6;
+    transform: rotate(3deg);
+    transform-origin: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+} */
+
+.top-image {
+    width: 260px;
+    height: 220px;
+    object-fit: cover;
+    /* border-radius: 6px; */
+    display: block;
+}
+
+.text-content {
+    flex: 1;
+    text-align: right;
+    direction: rtl;
+}
+
+.podcast-text {
+    font-size: 28px;
+    line-height: 1.8;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    /* text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .text-content {
+        text-align: center;
+    }
+    
+    .podcast-text {
+        font-size: 24px;
+    }
+    
+    .layered-frames {
+        width: 280px;
+        height: 240px;
+    }
+    
+    .frame-large {
+        width: 280px;
+        height: 240px;
+    }
+    
+    .frame-medium {
+        width: 250px;
+        height: 210px;
+    }
+    
+    .photo-frame {
+        width: 220px;
+        height: 170px;
+    }
+}
+
+@media (max-width: 480px) {
+    .podcast-section {
+        padding: 40px 20px;
+    }
+    
+    .podcast-text {
+        font-size: 20px;
+    }
+    
+    .layered-frames {
+        width: 240px;
+        height: 200px;
+    }
+    
+    .frame-large {
+        width: 240px;
+        height: 200px;
+    }
+    
+    .frame-medium {
+        width: 210px;
+        height: 170px;
+    }
+    
+    .photo-frame {
+        width: 180px;
+        height: 140px;
+    }
+    
+    .frame-purple {
+        width: 190px;
+        height: 150px;
+        top: 20px;
+        left: 20px;
+    }
+    
+    .top-image-frame {
+        width: 160px;
+        height: 110px;
+        top: 8px;
+        left: 30px;
+    }
+}
