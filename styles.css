@@ -241,7 +241,26 @@
     position: relative;
     overflow: hidden;
 }
-
+.competition-section1 {
+    background-image: url('/home/fatima/podcasty/Rectangle390.png') ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 4rem 2rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+.competition-section2 {
+    background-image: url('/home/fatima/podcasty/Rectanglee.png') ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 4rem 2rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
 .competition-header {
     text-align: center;
     margin-bottom: 3rem;
@@ -256,7 +275,39 @@
     color: #ff1493;
     animation: rotate 3s linear infinite;
 }
-
+.talk-img{
+    max-width: 950px;
+    width: 950px;
+}
+.let-img-talk{
+    margin: auto;
+    max-width: 1400px;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.let-img-talk2{
+    margin-top: 2rem;
+    margin: auto auto;
+    width: 50%;
+    /* width: 1000px; */
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.img-pink{
+    max-width: 1200px;
+    margin-top: 3rem;
+}
+.yellow-rec{
+    margin-top: 20px;
+    max-width: 100px;
+    border-radius: 30px;
+}
+.talk-middle{
+    max-width: 711px;
+    max-height: 660px;
+}
 .competition-title {
     font-size: 3rem;
     font-weight: 900;
@@ -269,13 +320,89 @@
     margin: 0 auto;
     position: relative;
 }
-
+.competition-content3{
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
 .competition-main {
     text-align: center;
     margin-bottom: 3rem;
     position: relative;
 }
+.competition-main1 {
+    margin-bottom: 3rem;
+    position: relative;
+}
+.first-img-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 43px;
+}
+.first-img-section2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 43px;
+}
+.first-left{
+    max-width: 221px;
+    max-height: 277px;
+}
+.first-middle{
+    max-width: 511px;
+    max-height: 460px;
+}
+.first-third{
+    max-width: 226px;
+    max-height: 277px;
+}
+.second-left{
+    max-width: 273px;
+    max-height: 277px;
+}
+.first-middle2{
+    margin-top: 20px;
+    margin-inline-start: 30px;
+    max-width: 427px;
+    width: 427px;
+    max-height: 362px;
+}
+.second-third{
+    max-width: 221px;
+    width: 300px;
+    max-height: 304px;
+    /* margin: auto auto; */
+    margin-bottom: 50px;
+}
+.winner{
+    display: flex;
+    flex-direction: row;
+}
+.bigger-winner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    gap:50px;
+    margin: auto auto;
+}
+.mic-big{
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 729px;
+}
+.first-word{
+    width: 655px;
 
+}
+.second-word{
+        width: 655px;
+
+}
 .competition-subtitle {
     font-size: 4rem;
     font-weight: 900;
