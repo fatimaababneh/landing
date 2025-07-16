@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
 }
+body {
+    font-family: 'Almarai', sans-serif;
+}
 .hero-content {
     text-align: center;
     z-index: 2;
@@ -913,4 +916,100 @@ html {
         top: 8px;
         left: 30px;
     }
+}
+.card-standards{
+    border-radius: 40px;
+    border: 1px solid white;
+    height: 560px;
+    width: 370px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.cards-section{
+    padding: 100px;
+    display: flex;
+    gap: 45px;
+    font-size: 50px;
+}
+
+.card1{
+    background-color: #F9399C;
+}
+.card2{
+    background-color: #0342DB;
+
+}
+.card3{
+    background-color: #FFCC38;
+
+}
+
+.standards-cards-container{
+    background: linear-gradient(to bottom, #6C1E6A 0%, #040404 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 1000px;
+    border-top-left-radius: 30px ;
+    border-top-right-radius: 30px ;
+    position: relative;
+}
+
+.title-standards{
+    padding-top: 85px;
+    font-size: 110px;
+    color: #e3cbea;
+}
+.lesh-tsharek{
+    height: 152px;
+    color: #DB5324;
+    font-size: 170px;
+    font-weight: 600;
+    padding-top: 20px;
+}
+
+.list-lesh-tsharek{
+    font-size: x-large;
+    padding-top: 130px !important;
+    gap: 30px;
+    padding-right: 50px;
+}
+
+.list-lesh-tsharek li{
+    font-size: 40px;
+    font-weight: 800 !important;
+    padding: 15px;
+}
+
+.before-footer{
+    background-color: #F8F8F8;
+    max-height: 600px;
+    height: 600px;
+    border-top-right-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 50px;
+    padding-bottom: 48px;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    font-size: xx-large;
+    padding: 50px;
+    padding-top: 180px;
+    gap: 15px;
+    padding-bottom: 500px;
+}
+
+.footer h1{
+    font-weight: 800 !important;
 }
